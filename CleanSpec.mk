@@ -214,3 +214,10 @@ $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/build.prop)
 # ************************************************
 # NEWER CLEAN STEPS MUST BE AT THE END OF THE LIST
 # ************************************************
+
+
+# For GCC 4.8 toolchain change
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/STATIC_LIBRARIES)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/SHARED_LIBRARIES)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/EXECUTABLES)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/lib/*.o)
